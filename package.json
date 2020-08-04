@@ -1,0 +1,60 @@
+{
+  "name": "@space-janitor/logging-js",
+  "version": "0.0.1",
+  "description": "SpaceJanitor logging NodeJS package",
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint --fix . && echo 'Lint complete.'",
+    "test": "jest --detectOpenHandles",
+    "build-docs": "jsdoc -r src/* -d docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/space-janitor/logging-js.git"
+  },
+  "keywords": [
+    "JavaScript"
+  ],
+  "author": "Carlos A. Betancourt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/space-janitor/common.js/issues"
+  },
+  "homepage": "https://github.com/space-janitor/common.js#readme",
+  "dependencies": {
+    "log4js": "^6.2.1",
+    "pkg-dir": "^4.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.8.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^25.5.1",
+    "jsdoc": "^3.6.4",
+    "jsdoc-to-markdown": "^5.0.3",
+    "prettier": "^2.0.4"
+  },
+  "jest": {
+    "modulePaths": [
+      "<rootDir>/src/"
+    ],
+    "testEnvironment": "node",
+    "collectCoverage": true,
+    "coverageThreshold": {
+      "global": {
+        "lines": 80
+      }
+    },
+    "automock": false,
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/config/"
+    ]
+  }
+}
