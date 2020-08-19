@@ -16,7 +16,7 @@ class Logging {
       appenders: { mainConsole: { type: 'console' } },
       categories: { default: { appenders: ['mainConsole'], level: 'debug' } },
     };
-    this.logger = this.getLog4JSLogger(module.filename);
+    this.logger = this.getLogger(module.filename);
   }
 
   /**
@@ -40,7 +40,7 @@ class Logging {
    * Gets logger given a module filename
    * @param {*} moduleFilename - module filename
    */
-  getLog4JSLogger(moduleFilename) {
+  getLogger(moduleFilename) {
     const packageRoot = PkgDir.sync(Path.dirname(moduleFilename));
     const packageInfo = this.getPackageInfo(moduleFilename);
     return Log4JS.getLogger(

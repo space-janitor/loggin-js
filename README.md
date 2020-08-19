@@ -28,4 +28,4 @@ npm test
 
 ## JSDoc
 
-Go to [documentation](./documentation.md) for more information.
+Go to [documentation](./docs/index.html) for more information.

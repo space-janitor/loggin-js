@@ -1,7 +1,7 @@
 'use strict';
 const Logging = require('../src/index');
 const OS = require('os');
-const logger = Logging.getLog4JSLogger(module.filename);
+const logger = Logging.getLogger(module.filename);
 try {
   Logging.initialize();
   const packageInfo = Logging.getPackageInfo(module.filename);
